@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'text' | rot13
+echo 'Everyone is a proponent of strong encryption.' | rot13
