@@ -4,11 +4,10 @@ x=0
 while [ $x -le 9 ]
 do
        	x=$((x + 1))
-		echo "Best School"	
-	
+		echo "Best School"
 
 	if [ $x -eq 9 ]
-		then
-			echo "hi"
-fi
+	then
+		echo "hi"
+	fi
 done
