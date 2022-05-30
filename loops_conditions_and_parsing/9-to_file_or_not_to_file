@@ -2,7 +2,7 @@
 # Thiz script gives you information about the school file
 
 if [ -e $file ]
-	then i
+	then 
 		echo school file exists
 		if [ -s $file] 
 		then 
