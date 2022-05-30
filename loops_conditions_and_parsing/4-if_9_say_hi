@@ -8,6 +8,6 @@ do
 
 	if [ $x -eq 9 ]
 	then
-		echo "hi"
+		echo "Hi"
 	fi
 done
