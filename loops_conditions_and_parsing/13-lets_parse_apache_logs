@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Apache!!
 
-awk '{ print $1 } ' apache-access.log | sort | uniq | wc -l
+awk '{ print $1 " " $9 }' apache-access.log  
