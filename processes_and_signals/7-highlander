@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+SIGTERM=x
+while true
+do 
+echo "To infinity and beyond"
+sleep 2
+if [ $x = 0 ]
+then 
+echo I am invincible!!!
+fi
+done
