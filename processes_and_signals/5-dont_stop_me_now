@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # stop it!
 
-kill 3110
+while true ; do kill vi ; done 
