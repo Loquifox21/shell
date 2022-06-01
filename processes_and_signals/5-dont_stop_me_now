@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # stop it!
 
-while true ; do kill vi ; done 
+kill -9 ./4-to_infinity_and_beyond
