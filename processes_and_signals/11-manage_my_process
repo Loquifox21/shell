@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# 
+
+sudo ./tmp/my_process &
+if [ "start" == "${1}" ]
+then
+	start "manage_my_process"
+	touch /var/run/my_process.pid
+	echo "manage_my_process started"
+elif [ "stop" == "${1}" ]
+then
+	stop "manage_my_process"
+	rm /var/run/my_process.pid
+	echo "manage_my_process stopped"
+elif [ "restart" == "${1}" ]
+then
+	stop "manage_my_process"
+	rm /var/run/my_process.pid
+	start "manage_my_process"
+	touch /var/run/my_process.pid
+	echo "manage_my_process restarted"
+else
+	echo "Usage: manage_my_process {start|stop|restart}"
+	
+
