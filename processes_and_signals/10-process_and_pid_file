@@ -12,9 +12,12 @@ sleep 2
 if [ $x = 0 ]
 then 
 rm "/var/run/myscript.pid"
+kill -9
 elif [ $y = 0 ]
 then
 rm "/var/run/myscript.pid"
+kill -9
 fi
+
 done
 
