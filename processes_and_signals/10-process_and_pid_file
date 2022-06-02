@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+x=SIGTERM
+y=SIGINT
+touch /var/run/myscript.pid
+trap "echo I hate the kill command" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+while true
+do 
+echo "To infinity and beyond"
+sleep 2
+if [ $x = 0 ]
+then 
+rm "/var/run/myscript.pid"
+elif [ $y = 0 ]
+then
+rm "/var/run/myscript.pid"
+fi
+done
+
