@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # 
 
-sudo ./tmp/my_process &
 if [ "${1}" == "start" ]
 then
 	./manage_my_process &
