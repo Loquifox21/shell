@@ -4,20 +4,21 @@
 sudo ./tmp/my_process &
 if [ "${1}" == "start" ]
 then
-	start "manage_my_process" ./tmp/my_process & 
+	./manage_my_process &
 	touch /var/run/my_process.pid
+	echo $! > /var/run/my_process.pid
 	echo "manage_my_process started"
 
    elif [ "${1}" == "stop" ]
    then
-	stop "manage_my_process" ./tmp/my_process &
+	   kill $( cat "/var/run/my_process.pid"  )
 	rm /var/run/my_process.pid
 	echo "manage_my_process stopped"
 
 	
    elif [ "${1}" == "restart" ]
    then
-	stop "manage_my_process" ./tmp/my_process &
+	   kill $( cat "/var/run/my_process.pid" )
 	rm /var/run/my_process.pid
 	start "manage_my_process"
 	touch /var/run/my_process.pid
